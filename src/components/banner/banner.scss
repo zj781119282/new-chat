@@ -1,0 +1,41 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+section.banner {
+  @include wh(100%, 562px);
+  @include icon-custom('./assets/banner_bg.png', left, center, auto, auto);
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+    @include wh(1024px, 100%);
+
+    article {
+      width: 364px;
+      margin-top: 200px;
+      h2 {
+        line-height: 36px;
+        font-size: 28px;
+        color: #fff;
+      }
+      p {
+        margin-top: 10px;
+        line-height: 24px;
+        color: #fff;
+      }
+    }
+
+    .common-button {
+      position: absolute;
+      left: 0;
+      top: 400px;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 115px;
+      @include wh(703px, 596px);
+    }
+  }
+}

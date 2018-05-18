@@ -1,0 +1,25 @@
+@import "./theme";
+
+.common-button {
+  padding: 15px 24px;
+  border: 1.5px solid #fff;
+  color: #fff;
+}
+
+h2.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+article.intro {
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    line-height: 24px;
+    font-size: 14px;
+    &:first-of-type {
+      margin-top: 10px;
+    }
+  }
+}

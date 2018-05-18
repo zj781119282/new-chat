@@ -1,0 +1,58 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+section#work {
+  @include wh(100%, 1595px);
+  @include icon-custom('./assets/work_bg1.png', left, 355px, 421px, 315px);
+
+  .cover-bg {
+    @include wh(100%, 100%);
+    @include icon-custom('./assets/work_bg2.png', right, 627px, 123px, 920px);
+
+    .container {
+      margin: 0 auto;
+      padding-top: 98px;
+      @include wh(1024px, 100%);
+
+      h2.title {
+        font-size: 28px;
+      }
+
+      .intro-block {
+        position: absolute;
+        width: 100%;
+        article {
+          width: 444px;
+        }
+        &.block1 {
+          top: 315px;
+        }
+        &.block2 {
+          top: 827px;
+        }
+        &.block3 {
+          bottom: 277px;
+        }
+      }
+
+      .image {
+        position: absolute;
+        &.intro1 {
+          left: 0;
+          top: 206px;
+          @include wh(437px, 402px);
+        }
+        &.intro2 {
+          right: 0;
+          top: 544px;
+          @include wh(264px, 503px);
+        }
+        &.intro3 {
+          left: 0;
+          bottom: 76px;
+          @include wh(479px, 484px);
+        }
+      }
+    }
+  }
+}

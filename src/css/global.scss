@@ -1,5 +1,21 @@
 @import "theme";
 
+/* 引入字体 */
+@font-face {
+  font-family: "roboto light";
+  src: url(./../font/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "roboto normal";
+  src: url(./../font/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "roboto bold";
+  src: url(./../font/Roboto-Bold.ttf);
+}
+
 /* 重置样式 */
 body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
   padding: 0;
@@ -8,9 +24,9 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
   font-style: normal;
   text-decoration: none;
   border: none;
-  color: #121212;
+  color: $deep-color;
   font-weight: normal;
-  font-family: "Microsoft Yahei";
+  font-family: "roboto normal", "Microsoft Yahei";
   box-sizing: border-box;
   outline: none;
   -webkit-tap-highlight-color:transparent;
@@ -31,7 +47,20 @@ input[type="button"], input[type="submit"], input[type="search"], input[type="re
 textarea { -webkit-appearance: none;}
 
 img {
+  width: 100%;
   vertical-align: top;
+}
+
+a, span, i {
+  display: inline-block;
+}
+
+section, header, footer {
+  min-width: 1200px;
+}
+
+.container {
+  position: relative;
 }
 
 /* 全局可用的class类 */
@@ -87,4 +116,16 @@ img {
 
 .hidden {
   display: none;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
 }

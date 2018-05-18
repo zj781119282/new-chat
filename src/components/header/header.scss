@@ -1,0 +1,76 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+header {
+  position: fixed;
+  z-index: 999;
+  transition: height .2s ease;
+  @include wh(100%, 107px);
+
+  &.with-bg {
+    @include icon-custom('./assets/header_bg.png', left, top, auto, 100%);
+  }
+
+  .container {
+    margin: 0 93px 0 55px;
+    transition: transform .2s ease;
+
+    &.little {
+      transform: scale(.75);
+    }
+
+    .logo {
+      margin-top: 23px;
+      @include wh(174px, 61px);
+      a {
+        @include wh(100%, 100%);
+      }
+    }
+
+    nav {
+      > ul {
+        margin-top: 33px;
+        > li {
+          position: relative;
+          float: left;
+          margin: 0 30px;
+          padding-right: 16px;
+          @include icon-custom('./../../assets/arrow.png', right, center, 10px, 6px);
+          a {
+            padding: 10px 0;
+            color: #fff;
+            &.current-language {
+              padding-left: 30px;
+              @include icon-custom('./../../assets/lang.png', left, center, 23px, 22px);
+            }
+            &:hover {
+              border-bottom: 2px solid #fff;
+            }
+          }
+          .dropdown {
+            position: absolute;
+            display: none;
+            width: 100%;
+            top: 36px;
+            padding: 10px 10px;
+            background-color: #347686;
+            li {
+              padding: 10px 0;
+              border-bottom: 1px solid transparent;
+              font-size: 14px;
+              color: #fff;
+              cursor: pointer;
+              &:hover {
+                border-color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      .common-button {
+        margin-top: 27px;
+      }
+    }
+  }
+}

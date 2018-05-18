@@ -1,13 +1,9 @@
 const header = {
-  index: 'Home',
-  product: 'Product',
-  down: 'Download',
-  help: 'Help',
-  login: 'Login',
-  email: 'Email:',
-  welcome: 'Welcome, ',
-  user: 'User Center',
-  logout: 'Log Out',
+  nav1: 'How It Works',
+  nav2: 'Key Features',
+  nav3: 'About Us',
+  nav4: 'Contact',
+  nav5: 'Download',
 };
 
 export default header;

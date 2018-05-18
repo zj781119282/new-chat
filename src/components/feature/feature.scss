@@ -1,0 +1,52 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+section#feature {
+  @include wh(100%, 1122px);
+  @include icon-custom('./assets/feature_bg.png', left, center, auto, auto);
+
+  .container {
+    margin: 0 auto;
+    padding-top: 68px;
+    @include wh(960px, 100%);
+
+    h2.title {
+      color: #fff;
+    }
+
+    .feature {
+      margin-top: 26px;
+
+      dl {
+        margin-top: 30px;
+        padding: 47px 40px 62px;
+        text-align: center;
+        background-color: $cyan-back;
+        @include wh(300px, 388px);
+        .image {
+          text-align: center;
+          img {
+            @include wh(auto, 82px);
+          }
+        }
+        dt {
+          line-height: 32px;
+          margin-top: 32px;
+          font-size: 20px;
+        }
+        dd {
+          line-height: 20px;
+          margin-top: 16px;
+        }
+        &:not(:nth-child(3n+1)) {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 64px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+section#about {
+  @include icon-custom('./assets/about_bg.png', right, 84px, 191px, 683px);
+  .container {
+    padding-top: 67px;
+
+    article {
+      p {
+        width: 640px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+
+    h2.paper {
+      margin-top: 55px;
+    }
+
+    .content {
+      width: 968px;
+      margin: 54px auto 0;
+      padding-bottom: 59px;
+      border-bottom: 2px solid $light-border;
+
+      dl {
+        padding: 42px 0;
+        background-color: $block-back;
+        @include wh(469px, 294px);
+
+        &:not(:first-child) {
+          margin-left: 30px;
+        }
+
+        .img {
+          height: 74px;
+          text-align: center;
+          img {
+            @include wh(auto, 100%);
+          }
+        }
+
+        dt {
+          margin-top: 40px;
+          text-align: center;
+        }
+
+        dd {
+          margin-top: 30px;
+          text-align: center;
+          a {
+            border-color: $theme-border;
+            color: $theme-border;
+          }
+        }
+      }
+    }
+
+    h2.contact {
+      margin-top: 69px;
+    }
+
+    .contact-padding {
+      width: 968px;
+      margin: 0 auto;
+      padding-bottom: 82px;
+      border-bottom: 1px solid $light-border;
+    }
+
+    h2.talk {
+      margin-top: 64px;
+    }
+
+    .btn {
+      margin-top: 32px;
+      margin-bottom: 50px;
+      text-align: center;
+      a {
+        border-color: $theme-border;
+        color: $theme-border;
+      }
+    }
+  }
+}

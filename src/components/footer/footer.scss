@@ -1,0 +1,46 @@
+@import "./../../css/theme";
+@import "./../../css/mixin";
+
+footer {
+  .follow {
+    padding: 70px 0 52px;
+    background-color: $block-back;
+    .sites {
+      width: 1024px;
+      line-height: 24px;
+      margin: 0 auto;
+      .icon {
+        margin-left: 15px;
+        @include wh(24px, 24px);
+        &.icon1 {
+          @include icon-normal('./assets/icon1.png');
+        }
+        &.icon2 {
+          @include icon-normal('./assets/icon2.png');
+        }
+        &.icon3 {
+          @include icon-normal('./assets/icon3.png');
+        }
+        &.icon4 {
+          @include icon-normal('./assets/icon4.png');
+        }
+        &.icon5 {
+          @include icon-normal('./assets/icon5.png');
+        }
+        &.icon6 {
+          @include icon-normal('./assets/icon6.png');
+        }
+      }
+    }
+  }
+  .copy {
+    height: 42px;
+    line-height: 42px;
+    @include icon-custom('./assets/footer_bg.png', left, top, auto, 100%);
+    p {
+      margin-left: 116px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
