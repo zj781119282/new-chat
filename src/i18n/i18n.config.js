@@ -22,7 +22,7 @@ function switchLanguage(key) {
 };
 
 function showTranslations() {
-  const currentLang = localStorage._lang === 'en-US' ? 'en-US' : 'zh-CN';
+  const currentLang = localStorage._lang === 'zh-CN' ? 'zh-CN' : 'en-US';
   const i18n = i18nConfig[currentLang];
 
   $('.current-language').text(currentLang === 'en-US' ? 'EN' : '中文');
