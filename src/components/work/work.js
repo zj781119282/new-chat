@@ -11,7 +11,7 @@ import intro3_cn from './assets/intro3_cn.png'
 
 $(() => {
   const lang = localStorage.getItem('_lang');
-  $('#work .intro1').append(`<img src="${lang === 'en-US' ? intro1_en : intro1_cn}"/>`);
-  $('#work .intro2').append(`<img src="${lang === 'en-US' ? intro2_en : intro2_cn}"/>`);
-  $('#work .intro3').append(`<img src="${lang === 'en-US' ? intro3_en : intro3_cn}"/>`);
+  $('#work .intro1').append(`<img src="${lang === 'zh-CN' ? intro1_cn : intro1_en}"/>`);
+  $('#work .intro2').append(`<img src="${lang === 'zh-CN' ? intro2_cn : intro2_en}"/>`);
+  $('#work .intro3').append(`<img src="${lang === 'zh-CN' ? intro3_cn : intro3_en}"/>`);
 });
