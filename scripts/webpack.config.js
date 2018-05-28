@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyjsPlugin = require('uglifyjs-webpack-plugin');
 
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
@@ -20,6 +21,7 @@ module.exports = {
   context: __dirname,
   entry: {
     index: ['./../src/js/index.js'],
+    'pdf-page': ['./../src/js/pdf-page.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -29,7 +31,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
     open: false,
-    port: 7000,
+    port: 7001,
   },
   resolve: {
     alias: {
@@ -54,8 +56,8 @@ module.exports = {
     }),
     new CommonsChunkPlugin({
       name: 'common',
-      chunks: ['index'],
-      minChunks: 1, // 提取所有chunks共同依赖的模块
+      chunks: ['index', 'pdf-page'],
+      minChunks: 2, // 提取所有chunks共同依赖的模块
     }),
     new ExtractTextPlugin('css/[name].css?[contenthash:8]', {
       // allChunks: true
@@ -65,6 +67,18 @@ module.exports = {
       template: './../src/index.html',
       chunks: ['common', 'index'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'pdf-page.html',
+      template: './../src/pdf-page.html',
+      chunks: ['common', 'pdf-page'],
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: 'static',
+        ignore: ['.*']
+      },
+    ]),
   ],
   module: {
     rules: [
