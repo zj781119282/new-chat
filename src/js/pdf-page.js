@@ -15,7 +15,7 @@ document.querySelector('title').text = pageTitle;
 
 url += pdfName;
 
-const default_scle = 1.5;
+const default_scle = 1;
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'static/pdfjs/build/pdf.worker.min.js';
 
