@@ -17,7 +17,7 @@ url += pdfName;
 
 const default_scle = 1;
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'static/pdfjs/build/pdf.worker.min.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'static/pdfjs/core/pdf.worker.min.js';
 
 const container = document.getElementById('pageContainer');
 

@@ -665,10 +665,10 @@ exports.waitOnEventOrTimeout = waitOnEventOrTimeout;
 
 
 var pdfjsLib = void 0;
-if (typeof window !== 'undefined' && window['pdfjs-dist/build/pdf']) {
-  pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (typeof window !== 'undefined' && window['pdfjs-dist/core/pdf']) {
+  pdfjsLib = window['pdfjs-dist/core/pdf'];
 } else {
-  pdfjsLib = require('../build/pdf.js');
+  pdfjsLib = require('./pdf.js');
 }
 module.exports = pdfjsLib;
 
