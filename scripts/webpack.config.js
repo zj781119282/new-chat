@@ -21,7 +21,6 @@ module.exports = {
   context: __dirname,
   entry: {
     index: ['./../src/js/index.js'],
-    'pdf-page': ['./../src/js/pdf-page.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -56,8 +55,8 @@ module.exports = {
     }),
     new CommonsChunkPlugin({
       name: 'common',
-      chunks: ['index', 'pdf-page'],
-      minChunks: 2, // 提取所有chunks共同依赖的模块
+      chunks: ['index'],
+      minChunks: 1, // 提取所有chunks共同依赖的模块
     }),
     new ExtractTextPlugin('css/[name].css?[contenthash:8]', {
       // allChunks: true
@@ -66,11 +65,6 @@ module.exports = {
       filename: 'index.html',
       template: './../src/index.html',
       chunks: ['common', 'index'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'pdf-page.html',
-      template: './../src/pdf-page.html',
-      chunks: ['common', 'pdf-page'],
     }),
     new CopyWebpackPlugin([
       {
