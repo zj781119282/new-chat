@@ -14,7 +14,7 @@ $(() => {
 
     return url + pdfName;
   }
-  
+
   $('.tech-paper').click(() => {
     const url = getPdfUrl('tech');
     window.open(url);
